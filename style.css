@@ -1,0 +1,107 @@
+/* CSS Code */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #D3F7FF;
+}
+
+h1 {
+    color: #158134;
+    margin: 20px;
+    position: relative;
+}
+
+/* Close icon styling using pseudo-element */
+h1::after {
+    content: '✕'; /* Unicode for X mark */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styling for the main container */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Styling for the Card Information section */
+.card-info {
+    flex: 1;
+    margin: 10px;
+}
+
+/* Styling for paragraphs inside Card Information */
+.card-info p {
+    margin: 10px 20px;
+}
+
+/* Styling for the Billing Information section */
+.billing-data {
+    flex: 1;
+    margin: 10px;
+}
+
+/* Styling for paragraphs inside Billing Information */
+.billing-data p {
+    margin: 10px 20px;
+}
+
+/* Media query for screens with a maximum width of 420px */
+@media screen and (max-width: 420px) {
+    /* Adjusting layout to a single column for small screens */
+    .container {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
+    /* Resetting flex properties for better alignment */
+    .card-info,
+    .billing-data {
+        flex: none;
+        width: 100%; /* Make sections full width in small screens */
+        margin: 10px 0; /* Add some margin between sections */
+    }
+
+    input {
+        max-width: 100%; /* Make input full width in small screens */
+        margin-bottom: 10px; /* Add some space between inputs */
+    }
+
+    /* Styling for the Continue button in small screens */
+    #continue {
+        margin: 10px 0; /* Add some margin between button and last input */
+        width: 180px; /* Make button full width */
+    }
+}
+
+
+/* Styling for labels */
+label {
+    font-weight: medium;
+}
+
+/* Styling for input fields */
+input {
+    background-color: #1E1E1E7A;
+    font-weight: medium;
+    padding: 5px;
+    border-style: none;
+    width: 60%;
+}
+
+/* Styling for the Continue button */
+#continue {
+    background-color: #158134;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bolder;
+    margin: 10px 25px; /* Adjust the top margin as needed */
+    border-style: none;
+}
+
